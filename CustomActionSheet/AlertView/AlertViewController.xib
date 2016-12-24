@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="JosefinSans-SemiBold.ttf">
+            <string>JosefinSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertViewController" customModule="CustomActionSheet" customModuleProvider="target">
+            <connections>
+                <outlet property="btnAlertFirst" destination="YdG-mn-c9r" id="vQ0-RQ-G7P"/>
+                <outlet property="btnAlertSecond" destination="Vla-ZE-Yo8" id="3bV-R5-WtJ"/>
+                <outlet property="imaheHeight" destination="WIP-KB-F4v" id="6p2-SW-mJw"/>
+                <outlet property="imgAlertView" destination="qe2-TM-f4F" id="PS7-NK-Hp1"/>
+                <outlet property="lblAlertViewTitle" destination="gDN-hd-taD" id="3dJ-sG-Fh6"/>
+                <outlet property="msgAlertView" destination="i2x-nl-bzx" id="FmH-5a-6gS"/>
+                <outlet property="subViewAlertView" destination="pb7-l8-zb6" id="6Tx-mc-ueq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pb7-l8-zb6" userLabel="subviewAlertView">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert Title!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDN-hd-taD" userLabel="LabelSuccess">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="Osl-5P-Fp7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="JosefinSans-SemiBold" family="Josefin Sans" pointSize="17"/>
+                            <color key="textColor" red="0.1450980392" green="0.57647058819999997" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPI-vd-FFY" userLabel="ViewSeprator">
+                            <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="ErU-R8-J8N"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PQh-bm-XEc">
+                            <subviews>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" verticalCompressionResistancePriority="749" image="safari" translatesAutoresizingMaskIntoConstraints="NO" id="qe2-TM-f4F">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="WIP-KB-F4v"/>
+                                        <constraint firstAttribute="width" constant="40" id="jCc-e6-HH4"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Your Item is listed successfully!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2x-nl-bzx" userLabel="LabelSuccessMessage">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="51" id="f0y-Ne-0cA"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="JosefinSans-SemiBold" family="Josefin Sans" pointSize="16"/>
+                                    <color key="textColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="qe2-TM-f4F" firstAttribute="top" secondItem="PQh-bm-XEc" secondAttribute="top" id="6w6-UK-oGx"/>
+                                <constraint firstItem="qe2-TM-f4F" firstAttribute="centerX" secondItem="PQh-bm-XEc" secondAttribute="centerX" id="BdI-Cc-7af"/>
+                                <constraint firstItem="i2x-nl-bzx" firstAttribute="top" secondItem="qe2-TM-f4F" secondAttribute="bottom" id="FWk-P0-qf5"/>
+                                <constraint firstAttribute="trailing" secondItem="i2x-nl-bzx" secondAttribute="trailing" id="k7X-JN-BW6"/>
+                                <constraint firstItem="i2x-nl-bzx" firstAttribute="leading" secondItem="PQh-bm-XEc" secondAttribute="leading" id="txU-7w-I4d"/>
+                                <constraint firstAttribute="bottom" secondItem="i2x-nl-bzx" secondAttribute="bottom" constant="8" id="zaI-vd-qGQ"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqx-qk-3pe">
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Jtc-UK-96o">
+                                    <subviews>
+                                        <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdG-mn-c9r">
+                                            <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="Yes"/>
+                                            <connections>
+                                                <action selector="alertViewAction:" destination="-1" eventType="touchUpInside" id="srk-kk-pye"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="102" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vla-ZE-Yo8">
+                                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="No"/>
+                                            <connections>
+                                                <action selector="alertViewAction:" destination="-1" eventType="touchUpInside" id="XQK-4W-6b0"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Jtc-UK-96o" firstAttribute="leading" secondItem="iqx-qk-3pe" secondAttribute="leading" id="0Zh-eT-IDG"/>
+                                <constraint firstAttribute="bottom" secondItem="Jtc-UK-96o" secondAttribute="bottom" id="1tQ-Vk-ImR"/>
+                                <constraint firstAttribute="trailing" secondItem="Jtc-UK-96o" secondAttribute="trailing" id="JOU-lO-rbB"/>
+                                <constraint firstItem="Jtc-UK-96o" firstAttribute="top" secondItem="iqx-qk-3pe" secondAttribute="top" id="ggt-bj-IFZ"/>
+                                <constraint firstAttribute="height" constant="34" id="qHF-ms-F8o"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="287" id="5hL-WL-2YR"/>
+                        <constraint firstItem="gDN-hd-taD" firstAttribute="top" secondItem="pb7-l8-zb6" secondAttribute="top" constant="8" id="8xk-va-LuZ"/>
+                        <constraint firstItem="gDN-hd-taD" firstAttribute="leading" secondItem="pb7-l8-zb6" secondAttribute="leading" constant="8" id="Aiy-Ao-QfS"/>
+                        <constraint firstAttribute="bottom" secondItem="iqx-qk-3pe" secondAttribute="bottom" constant="8" id="Bkd-6a-Xgk"/>
+                        <constraint firstItem="gPI-vd-FFY" firstAttribute="top" secondItem="gDN-hd-taD" secondAttribute="bottom" constant="17" id="Bnz-GU-MBW"/>
+                        <constraint firstItem="PQh-bm-XEc" firstAttribute="leading" secondItem="pb7-l8-zb6" secondAttribute="leading" constant="8" id="DZl-Dp-AyP"/>
+                        <constraint firstItem="gPI-vd-FFY" firstAttribute="leading" secondItem="pb7-l8-zb6" secondAttribute="leading" id="Mz2-ez-F7x"/>
+                        <constraint firstAttribute="trailing" secondItem="iqx-qk-3pe" secondAttribute="trailing" constant="8" id="RGe-4F-bGC"/>
+                        <constraint firstItem="PQh-bm-XEc" firstAttribute="top" secondItem="gPI-vd-FFY" secondAttribute="bottom" constant="8" id="Rkt-ed-xwq"/>
+                        <constraint firstItem="iqx-qk-3pe" firstAttribute="leading" secondItem="pb7-l8-zb6" secondAttribute="leading" constant="8" id="Twh-2W-JSv"/>
+                        <constraint firstAttribute="trailing" secondItem="gPI-vd-FFY" secondAttribute="trailing" id="UbK-5S-ANm"/>
+                        <constraint firstItem="iqx-qk-3pe" firstAttribute="top" secondItem="PQh-bm-XEc" secondAttribute="bottom" constant="4" id="kvJ-MV-0zV"/>
+                        <constraint firstAttribute="trailing" secondItem="PQh-bm-XEc" secondAttribute="trailing" constant="8" id="uxh-0a-jqX"/>
+                        <constraint firstAttribute="trailing" secondItem="gDN-hd-taD" secondAttribute="trailing" constant="8" id="xoB-7d-U8w"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pb7-l8-zb6" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="kse-tc-yEc"/>
+                <constraint firstItem="pb7-l8-zb6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mZD-Ln-mpz"/>
+            </constraints>
+            <point key="canvasLocation" x="26.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="safari" width="100" height="100"/>
+    </resources>
+</document>

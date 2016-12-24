@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActionSheetVC" customModule="CustomActionSheet" customModuleProvider="target">
+            <connections>
+                <outlet property="btnCancel" destination="ldA-Yh-faI" id="QRo-P0-EuW"/>
+                <outlet property="subView" destination="wpU-CA-3Cn" id="Nn2-MU-HgS"/>
+                <outlet property="tblActionSheet" destination="a3m-Kq-lYq" id="su6-U8-pIo"/>
+                <outlet property="tblBottomConts" destination="mpw-Nf-JHW" id="10A-YJ-CFL"/>
+                <outlet property="tblHeightConstrint" destination="Mp6-dd-gRz" id="xIc-kQ-wOr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpU-CA-3Cn" userLabel="SubviewActionSheet">
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a3m-Kq-lYq">
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="faS-tL-e6p"/>
+                                <outlet property="delegate" destination="-1" id="TDC-gR-hkg"/>
+                            </connections>
+                        </tableView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWn-9r-8Fx">
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldA-Yh-faI">
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <state key="normal" title="Cancel"/>
+                                    <connections>
+                                        <action selector="cancelButton:" destination="-1" eventType="touchUpInside" id="is7-dV-efN"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="ldA-Yh-faI" firstAttribute="leading" secondItem="eWn-9r-8Fx" secondAttribute="leading" constant="8" id="6Ll-uh-qH4"/>
+                                <constraint firstAttribute="bottom" secondItem="ldA-Yh-faI" secondAttribute="bottom" constant="8" id="A15-Mv-2ut"/>
+                                <constraint firstAttribute="trailing" secondItem="ldA-Yh-faI" secondAttribute="trailing" constant="8" id="Krk-6o-ezS"/>
+                                <constraint firstAttribute="height" constant="60" id="Ror-Oa-whc"/>
+                                <constraint firstItem="ldA-Yh-faI" firstAttribute="top" secondItem="eWn-9r-8Fx" secondAttribute="top" constant="8" id="wmj-qa-pR2"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="eWn-9r-8Fx" firstAttribute="leading" secondItem="wpU-CA-3Cn" secondAttribute="leading" id="BGf-aV-WV6"/>
+                        <constraint firstItem="a3m-Kq-lYq" firstAttribute="leading" secondItem="wpU-CA-3Cn" secondAttribute="leading" constant="8" id="Jno-0O-3Tc"/>
+                        <constraint firstAttribute="height" constant="335" id="Mp6-dd-gRz"/>
+                        <constraint firstAttribute="trailing" secondItem="a3m-Kq-lYq" secondAttribute="trailing" constant="8" id="Rhv-0k-Dgx"/>
+                        <constraint firstAttribute="bottom" secondItem="eWn-9r-8Fx" secondAttribute="bottom" id="Sw6-jf-cb2"/>
+                        <constraint firstItem="a3m-Kq-lYq" firstAttribute="top" secondItem="wpU-CA-3Cn" secondAttribute="top" id="cSg-uT-XLX"/>
+                        <constraint firstItem="eWn-9r-8Fx" firstAttribute="top" secondItem="a3m-Kq-lYq" secondAttribute="bottom" id="rms-Cc-4Ak"/>
+                        <constraint firstAttribute="trailing" secondItem="eWn-9r-8Fx" secondAttribute="trailing" id="vMu-yk-Wg4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wpU-CA-3Cn" secondAttribute="trailing" id="X2g-tq-0Nb"/>
+                <constraint firstItem="wpU-CA-3Cn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Yvf-6G-R5d"/>
+                <constraint firstAttribute="bottom" secondItem="wpU-CA-3Cn" secondAttribute="bottom" id="mpw-Nf-JHW"/>
+            </constraints>
+            <point key="canvasLocation" x="32.5" y="66.5"/>
+        </view>
+    </objects>
+</document>
